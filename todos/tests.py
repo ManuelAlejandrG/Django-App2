@@ -22,10 +22,8 @@ class TodoModelTest(TestCase):
 
 	def test_title_max_length(self):
 		title = Todo.objects.get(id=1)
-		max_length = todo._meta.get_field('title').max_length
+		max_length = title._meta.get_field('title').max_length
 		self.assertEquals(max_length,200)
-
-
 
 	
   
